@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiautomationdev"
+version = "0.1.0"
+description = "AI-native repository maintenance toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "AI maintainer with human oversight" }
+]
+dependencies = []
+
+[project.scripts]
+aad = "aiautomationdev.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
