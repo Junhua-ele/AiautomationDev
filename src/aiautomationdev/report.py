@@ -69,7 +69,10 @@ def _extract_changed_files(lines: Iterable[str]) -> list[str]:
     for line in lines:
         if len(line) <= 3:
             continue
-        changed.append(line[3:].strip())
+        _, _, path_part = line.partition(" ")
+        path = path_part.strip()
+        if path:
+            changed.append(path)
     return changed
 
 

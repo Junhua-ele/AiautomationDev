@@ -50,8 +50,10 @@ aad weekly-report --repo . --format markdown
 ## Example output
 
 ```bash
-aad weekly-report --repo . --format markdown > WEEKLY_REPORT.md
+aad weekly-report --repo . --format markdown --output WEEKLY_REPORT.md
 ```
+
+The `--output` flag lets you save the generated report directly from the CLI, which is handy for scheduled maintenance jobs and automation scripts.
 
 ## Roadmap
 
